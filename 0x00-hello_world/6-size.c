@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 /**
  *main - Enter point
  *
@@ -12,7 +11,7 @@ int main(void)
 	long int longintType;
 	long long int longlongintType;
 	float floatType;
-	
+
 	printf("size of a char: %lu bytes\n", sizeof(charType));
 	printf("size of an int: %lu bytes\n", sizeof(intType));
 	printf("size of a long int: %lu bytes\n", sizeof(longintType));
