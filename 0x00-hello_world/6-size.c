@@ -1,25 +1,21 @@
-#include <stdio.h>
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+#include<stdio.h>
 
+/**
+ *main - Enter point
+ *
+ *Return: Always 0 (Success)
+ */
 int main(void)
 {
-	#ifdef __x86_64__
-	printf("64-bit version:\n");
-	#else
-	printf("32-bit version:\n");
-	#endif
+	int intType;
+	float floatType;
+	double doubleType;
+	char charType;
 
-	printf("Size of a char: %lu byte(s)\n", sizeof(char));
-	printf("Size of an int: %lu byte(s)\n", sizeof(int));
-	printf("Size of a long int: %lu byte(s)\n", sizeof(long int));
-	printf("Size of a long long int: %lu byte(s)\n", sizeof(long long int));
-	printf("Size of a float: %lu byte(s)\n", sizeof(float));
-
-
+	printf("size of int: %zu bytes\n", sizeof(intType));
+	printf("size of float: %zu bytes\n", sizeof(floatType));
+	printf("size of double: %zu bytes\n", sizeof(doubleType));
+	printf("size of char: %zu bytes\n", sizeof(charType));
 	return (0);
 
 }
