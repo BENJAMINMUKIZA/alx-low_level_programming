@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_array - prints the content of integer array
+ * main - check the code
  * @a: an array of integers
  * @n: the number of elements to swap
  *
