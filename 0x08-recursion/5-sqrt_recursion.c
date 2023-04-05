@@ -21,13 +21,13 @@ int _sqrt_helper(int n, int low, int high)
 		return (_sqrt_helper(n, low, mid - 1));
 	return (_sqrt_helper(n, mid + 1, high));
 }
-
-
 /**
  * _sqrt_recursion - square root of a number
  *
  * @n: anumber to hold square root
- * Return: _sqrt_recursion(int n)
+ * Return: the square root of n or -1 if n does not have
+ * a natural square root
+ *
  */
 int _sqrt_recursion(int n)
 {
