@@ -1,44 +1,31 @@
 #include "main.h"
-#include <stdio.h>
 
+int actual_prime(int a, int z);
 /**
- * is_prime_number - checks if a number is prime
- * @n: input number to check
- * Return: 1 if prime, 0 otherwise
+ * is_prime_number - prints if an integer is prime number
+ * @a: number to evaluate
+ * Return: 1 if a is prime number, 0 other wise
  */
-int is_prime_number(int n)
+int is_prime_number(int a)
 {
-	if (n <= 1)
-	{
+	int z = a - 1;
+
+	if (a <= 1)
 		return (0);
-	}
-	if (n <= 3)
-	{
-		return (1);
-	}
-	if (n % 2 == 0 || n % 3 == 0)
-	{
-		return (0);
-	}
-	for (int i = 5; i * i <= n; i += 6)
-	{
-		if (n % i == 0 || n % (i + 2) == 0)
-		{
-			return (0);
-		}
-	}
-	return (1);
+	return (actual_prime(a, z));
 }
 /**
- * main - Entry point
- * Return: Always 0
+ * actual_prime - calculates if anumber is prime recursively
+ * @a: number to evaluate
+ * @z: iterator
+ *
+ * Return: 1 if a is prime, 0 otherwise
  */
-int main(void)
+int actual_prime(int a, int z)
 {
-	int n = 13;
-
-	printf("%d is prime: %d\n", n, is_prime_number(n));
-	n = 16;
-	printf("%d is prime: %d\n", n, is_prime_number(n));
-	return (0);
+	if (z == 1)
+		return (1);
+	if (a % z == 0 && z > 0)
+		return (0);
+	return (actual_prime(a, z - 1));
 }
