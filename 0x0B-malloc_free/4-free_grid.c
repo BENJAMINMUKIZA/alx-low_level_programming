@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * free_grid - function that frees two dimension
  * @grid: apointer to the grid to be freezed
