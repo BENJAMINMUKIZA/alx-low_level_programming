@@ -7,7 +7,7 @@
  *
  * Return: pointer to dest
  */
-void *_memcpy(void *dest, const void *src, size_t n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	char *d = dest;
 	const char *s = src;

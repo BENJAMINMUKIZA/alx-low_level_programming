@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _memset - fills the first n bytes of the memory area pointed
  * to by s with constant byte b
@@ -8,7 +9,7 @@
  *
  * Return: A pointer to the memory area s
  */
-void *_memset(void *s, int b, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned char *p = s;
 	unsigned char c = b;

@@ -7,7 +7,7 @@
  * Return: the number of characters in the initial segment of s which consist
  * only of characters from accept
  */
-unsigned int _strspn(const char *s, const char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	const char *p;
 	const char *a;
