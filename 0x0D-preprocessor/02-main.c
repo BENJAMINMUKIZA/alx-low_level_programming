@@ -1,13 +1,19 @@
-#include <stdio.h>
+#include "_putchar.c"
 /**
- * main - check the code
- * Always returns 0 on success
+ * main - prints the name of the file it was compiled from,
+ * followed by new line
  *
- * Return: 0 on success
+ * Return: ALways 0
  */
-
 int main(void)
 {
-	printf("This program was compiled from: %s\n", __FILE__);
+	char *filename = __FILE__;
+
+	while (*filename)
+	{
+		_putchar(*filename);
+		filename++;
+	}
+	_putchar('\n');
 	return (0);
 }
