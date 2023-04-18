@@ -18,5 +18,5 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		d->age = age;
 		d->owner = owner;
 	}
-	printf("Dog initialzied: %s, %1.f, Owner:%s\n", d -> name, d -> age, d -> owner);
+	printf("%s, %1.f, %s\n", d->name, d->age, d->owner);
 }
