@@ -2,20 +2,20 @@
 #define CALC_H
 #include <stdlib.h>
 /**
- * struct op - struct op
+ * struct op - struct op to perform simple operation
  *
- * @op: The operator
- * @f: function associated
+ * @op: The operator to  help us perform the action
+ * @f: function associated to the operation
  */
 typedef struct op
 {
 	char *op;
-	int (*f)(int a, int b);
+	int (*f)(int q, int w);
 } op_t;
 /* function prototype */
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
+int op_add(int q, int w);
+int op_sub(int q, int w);
+int op_mul(int q, int w);
+int op_div(int q, int w);
+int op_mod(int q, int w);
 #endif

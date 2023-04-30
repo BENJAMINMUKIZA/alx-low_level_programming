@@ -1,65 +1,62 @@
 #include "3-calc.h"
 /**
- * op_add - returns the sum of a and b
- * @a: the first integer
- * @b: second integer
- * Return: sum of a and b
- */
-int op_add(int a, int b)
-{
-	return (a + b);
-}
-
-/**
- * op_sub - returns the substraction of a and b
- * @a: first integer
- * @b: second integer
- * Return: substract a from b
- */
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
-
-/**
- * op_mul - returns the multiplication of a and b
- * @a: first integer
- * @b: second integer
- * Return: multiplication of a and b
- */
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
-
-/**
- * op_div - return division a by b
- * @a: first integer
- * @b: secod integer
- * Return: result of division a by b
- */
-int op_div(int a, int b)
-{
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	return (a / b);
-}
-/**
- * op_mod - returns the remainder of the division of a by b
- * @a: first integer
- * @b: second integer
+ * op_add - adds two integers or numbers
+ * @q: The first integer to add to second one
+ * @w: The second integer to add to first one
  *
- * Return: remainder of the division of a by b
+ * Return: The sum of the two integers
+ * that has been added
  */
-int op_mod(int a, int b)
+int op_add(int q, int w)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	return (a % b);
+	return (q + w);
+}
+
+/**
+ * op_sub - subtracts the two integers or numbers
+ * @q: The first integer to sub
+ * @w: The second integer to subtracted from the first one
+ *
+ * Return: The difference of the two integers or numbers
+ */
+int op_sub(int q, int w)
+{
+	return (q - w);
+}
+
+/**
+ * op_mul - multiplies two integers or numbers
+ * @q: The first integer to multiply to second one
+ * @w: The second integer to multiply to firt
+ *
+ * Return: The product of the two integers we get as result
+ */
+int op_mul(int q, int w)
+{
+	return (q * w);
+}
+
+/**
+ * op_div - divides two integers or numbers
+ * @q: The numerator of the function
+ * @w: The denominator of the function
+ *
+ * Return: The result of the division we get
+ */
+int op_div(int q, int w)
+{
+	return (q / w);
+}
+
+/**
+ * op_mod - finds the remainder of the division
+ * of two integers or numbers
+ * @q: The numerator of the function
+ * @w: The denominator or diviser
+ *
+ * Return: The remainder of the division we get
+ */
+int op_mod(int q, int w)
+{
+	return (q % w);
 }
