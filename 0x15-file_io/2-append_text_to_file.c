@@ -3,34 +3,35 @@
 #include "main.h"
 
 /**
- * append_text_to_file - appends text to the end of a file
+ * append_text_to_file - Afunction that appends
+ * text to the end of a file
  *
- * @filename: name of the file to append to
- * @text_content: text to append to file
+ * @filename: Name of the file to be appended to
+ * @text_content: A text that is going append to file
  *
- * Return: 1 on success, -1 on failure
+ * Return: Always 1 on success, -1 on failure
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, bytes_written = 0, text_len = 0;
+	int td, num_bytes_written = 0, n = 0;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		while (text_content[text_len] != '\0')
-			text_len++;
+		while (text_content[n] != '\0')
+			n++;
 	}
 
-	fd = open(filename, O_WRONLY | O_APPEND);
-	if (fd == -1)
+	td = open(filename, O_WRONLY | O_APPEND);
+	if (td == -1)
 		return (-1);
 
-	if (text_len > 0)
-		bytes_written = write(fd, text_content, text_len);
+	if (n > 0)
+		num_bytes_written = write(td, text_content, n);
 
-	close(fd);
+	close(td);
 
-	return (bytes_written == text_len ? 1 : -1);
+	return (num_bytes_written == n ? 1 : -1);
 }
